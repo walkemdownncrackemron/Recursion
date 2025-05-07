@@ -90,6 +90,7 @@ for i in range(1, 101):
 # 7) Recursive Fibonacci with memoization
 # (fib(0)=0, fib(1)=1, fib(2)=fib(1)+fib(0), fib(3)=fib(2)+fib(1),...)
 # (fib(n)=fib(n-1)+fib(n-2))
+#memoization: store previously computed values in a dictionary to avoid recomputation
 def fibmemo(n,memo={}):
     if n in memo:
         return memo[n]
