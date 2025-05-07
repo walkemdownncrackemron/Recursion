@@ -40,13 +40,14 @@ for num in range(1001):
     print(f"{num}: {fib3(num)}")
 
 #Tower of Hanoi
-def TowerOfHanoi(n, source, destination_rod, auxiliary_rod):
+def TowerOfHanoi(n, source, destination_rod, auxiliary_rod): 
+    #n=num of disks, source=source rod, destination_rod=destination rod, auxiliary_rod=auxiliary rod
     if n == 1:
         print("Move disk 1 from source ", source, " to destination ", destination_rod)
-        return #base case- directly move disk 1 from source to destination
+        return #base case- directly move disk 1 from source to destination when n==1
     TowerOfHanoi(n - 1, source, auxiliary_rod, destination_rod)#recursive case- move n-1 disks from source to auxiliary rod w destination as temp rod
     print("Move disk ", n, " from source ", source, " to destination ", destination_rod)# move nth disk from source to destination rod direct
     TowerOfHanoi(n - 1, auxiliary_rod, destination_rod, source)## move n-1 disks from auxiliary rod to destination rod w source as temp rod
 
 n = 4
-TowerOfHanoi(n, 'A', 'B', 'C')
+TowerOfHanoi(n, 'A', 'B', 'C')# #A,B,C are names of rods
