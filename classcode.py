@@ -50,4 +50,5 @@ def TowerOfHanoi(n, source, destination_rod, auxiliary_rod):
     TowerOfHanoi(n - 1, auxiliary_rod, destination_rod, source)#recursive case2- move n-1 disks from auxiliary rod to destination rod w source as temp rod
 
 n = 4
-TowerOfHanoi(n, 'A', 'B', 'C')# #A,B,C are names of rods
+TowerOfHanoi(n, 'A', 'B', 'C')# #A,B,C are names of rods A=source, B=destination, C=auxiliary
+# The function prints the steps to move n disks from source rod to destination rod using auxiliary rod
