@@ -10,8 +10,9 @@ def multix(a, b):
     else:
         return -multix(a,-b)
 
-for i in range(-10, 11):
-    for j in range(-10, 11):
+for i in range(1, 10): #loop through 1 to 9
+    # Test multiplication function
+    for j in range(1, 10):
         print(f"{i}*{j}={multix(i,j)}")
     print("===")
 
@@ -64,7 +65,7 @@ def streverse(s):
     return s[-1]+streverse(s[:-1])
 
 if __name__=="__main__":
-    s = input("Enter a string: ")
+    s = input("Enter string: ")
     print(f"Reversed string: {streverse(s)}")
 
 # 6) prime number check using recursion
@@ -85,7 +86,7 @@ for i in range(1, 101):
     if is_prime(i):
         print(f"{i} is prime")
     else:
-        print(f"{i} is not prime")
+        print(f"{i} not prime")
 
 # 7) Recursive Fibonacci with memoization
 # (fib(0)=0, fib(1)=1, fib(2)=fib(1)+fib(0), fib(3)=fib(2)+fib(1),...)
